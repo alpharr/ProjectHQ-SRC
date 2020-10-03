@@ -1,0 +1,52 @@
+
+
+# Alphar
+# 02/10/2020
+
+options:
+	pf: §c§lProjectHQ &7|
+
+command //debugrefillstick [<text>]:
+	trigger:
+		give player 1 stick named "&cRefill Stick"
+		
+
+on right click:
+	if player is holding stick named "&cRefill Stick":
+		if {rstick.%player%} is false:
+			set {rstick.%player%} to true
+			send "{@pf} &aSuccesfully refilled!"
+			set slot 1 of player's inventory to stick named "&cRefill Stick"
+			set slot 2 of player's inventory to mushroom_stew
+			set slot 3 of player's inventory to mushroom_stew
+			set slot 4 of player's inventory to mushroom_stew
+			set slot 5 of player's inventory to mushroom_stew
+			set slot 6 of player's inventory to mushroom_stew
+			set slot 7 of player's inventory to mushroom_stew 
+			set slot 8 of player's inventory to mushroom_stew
+			set slot 9 of player's inventory to mushroom_stew
+			set player's experience to 10
+			wait 1 second
+			set player's experience to 9
+			wait 1 second
+			set player's experience to 8
+			wait 1 second
+			set player's experience to 7
+			wait 1 second
+			set player's experience to 6
+			wait 1 second
+			set player's experience to 5
+			wait 1 second
+			set player's experience to 4
+			wait 1 second
+			set player's experience to 3
+			wait 1 second
+			set player's experience to 2
+			wait 1 second
+			set player's experience to 1
+			wait 1 second
+			set player's experience to 0
+			set {rstick.%player%} to false
+			stop
+		if {rstick.%player%} is true:
+			send "&4ERROR: &cYou are currently on a 10s cooldown!"
