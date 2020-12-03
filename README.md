@@ -7,4 +7,4 @@ Made in 02/10
 
 (If this goes public, enjoy lmao, also don't take credit for this. This really took us a bunch of weeks to fully finish the server.)
 
-server closed + we never finished half of the server LUL
+**server closed + we never finished half of the server LUL**
